@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная – Кино-База</title>
+    <!--подключение Bootstrap-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🎬 Кино-База</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Каталог фильмов</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container my-4">
+        <div class="p-5 bg-white border rounded shadow-sm">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">База всех фильмов</h1>
+                    <p class="lead text-muted">Ищите фильмы, читайте рецензии критиков и зрителей, узнавайте больше об актерах.</p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="input-group mb-2">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Поиск по названию...">
+                    </div>
+                    <select id="genreFilter" class="form-select">
+                        <option value="all">Все жанры</option>
+                        <option value="Фантастика">Фантастика</option>
+                        <option value="Драма">Драма</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <h2 class="h4 mb-3 text-secondary border-bottom pb-2">Сейчас в кино (Новинки)</h2>
+        <div class="row g-3" id="newMoviesContainer">
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <h2 class="h4 mb-3 fw-bold border-bottom pb-2">Популярные фильмы</h2>
+        <div class="row g-4" id="popularMoviesContainer">
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Кино-База. Учебный проект.</p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
