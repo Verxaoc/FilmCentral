@@ -1,0 +1,14 @@
+body {
+    min-height: 100vh;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+}
