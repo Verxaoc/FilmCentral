@@ -65,7 +65,5 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.addEventListener('input', filterMovies);
     genreFilter.addEventListener('change', filterMovies);
 
-    filtered.sort((a, b) => b.rating - a.rating);
-
     renderMovies(movies);
 });
