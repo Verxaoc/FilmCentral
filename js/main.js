@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return matchesSearch && matchesGenre;
         });
 
+        filtered.sort((a, b) => b.rating - a.rating);
+
         renderMovies(filtered);
     }
 
