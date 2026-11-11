@@ -28,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm">
                             <!-- Заглушка вместо картинки, если нет постера -->
-                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
-                                Постер ${movie.title}
-                            </div>
+                            ${movie.poster 
+                                ? `<img src="${movie.poster}" class="card-img-top" alt="Постер фильма ${movie.title}" style="height: 400px; object-fit: cover;">` 
+                                : `<div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 400px;">Нет постера</div>`
+                            }
                             <div class="card-body d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <h3 class="h5 card-title mb-0">${movie.title}</h3>

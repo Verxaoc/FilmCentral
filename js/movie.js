@@ -49,9 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <!-- Левая колонка: Постер и рейтинг -->
             <div class="col-12 col-md-4">
                 <div class="card shadow-sm mb-3">
-                    <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 400px;">
-                        Постер фильма
-                    </div>
+                    ${movie.poster 
+                        ? `<img src="${movie.poster}" class="img-fluid rounded shadow" alt="Постер фильма ${movie.title}">` 
+                        : `<div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 400px;">Нет постера</div>`
+                    }
                     <div class="card-body text-center">
                         <h1 class="h3 mb-1">${movie.title}</h1>
                         <p class="text-muted mb-3">${movie.year} • ${movie.genre}</p>
