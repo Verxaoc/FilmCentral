@@ -68,9 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 
                 <h3 class="h5 mt-4 border-bottom pb-2">Съёмочная группа и актеры</h3>
-                <p class="mb-1"><strong>Режиссер:</strong> <a href="#" class="text-decoration-none">${movie.director}</a></p>
+                <p class="mb-1">
+                    <strong>Режиссер:</strong> 
+                    <a href="https://ru.wikipedia.org/wiki/${encodeURIComponent(movie.director)}" target="_blank" class="text-decoration-none">
+                        ${movie.director}
+                    </a>
+                </p>
                 <p><strong>В ролях:</strong> 
-                    ${movie.cast.map(actor => `<a href="#" class="badge bg-secondary text-decoration-none fs-6 me-1">${actor}</a>`).join('')}
+                    ${movie.cast.map(actor => `
+                        <a href="https://ru.wikipedia.org/wiki/${encodeURIComponent(actor)}" target="_blank" class="badge bg-secondary text-decoration-none fs-6 me-1 mb-1">
+                            ${actor}
+                        </a>
+                    `).join('')}
                 </p>
 
                 <!-- Компонент Tabs (Вкладки) для рецензий -->
