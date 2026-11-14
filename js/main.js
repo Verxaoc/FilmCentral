@@ -38,13 +38,30 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span class="badge bg-success fs-6">★ ${movie.rating}</span>
                                 </div>
                                 <p class="text-muted small mb-3">${movie.year} • ${movie.genre}</p>
-                                <a href="movie.html?id=${movie.id}" class="btn btn-outline-primary mt-auto">Подробнее о фильме</a>
+                                <a href="movie.html?id=${movie.id}" class="btn btn-outline-primary mt-auto">О фильме</a>
                             </div>
                         </div>
                     </div>
                 `;
             }
         });
+    }
+
+    // Отрисовка таблицы Топ-5
+    const topMoviesTable = document.getElementById('topMoviesTable');
+    if (topMoviesTable) {
+        // Сортируем копию массива по убыванию рейтинга
+        const top5 = [...movies].sort((a, b) => b.rating - a.rating).slice(0, 5);
+        
+        topMoviesTable.innerHTML = top5.map((movie, index) => `
+            <tr>
+                <td><strong>${index + 1}</strong></td>
+                <td><a href="movie.html?id=${movie.id}" class="text-decoration-none">${movie.title}</a></td>
+                <td>${movie.year}</td>
+                <td>${movie.genre}</td>
+                <td><span class="badge bg-success">★ ${movie.rating}</span></td>
+            </tr>
+        `).join('');
     }
 
     function filterMovies() {

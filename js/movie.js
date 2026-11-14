@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <button class="nav-link" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab">Зрители</button>
                     </li>
                 </ul>
-                <div class="tab-content bg-white p-3 border border-top-0 rounded-bottom" id="reviewTabsContent">
+                <div class="tab-content bg-body-secondary p-3 border border-top-0 rounded-bottom" id="reviewTabsContent">
                     <div class="tab-pane fade show active" id="critics" role="tabpanel">
                         ${criticsReviews || '<p class="text-muted">Рецензий от критиков пока нет.</p>'}
                     </div>

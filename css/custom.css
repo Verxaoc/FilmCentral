@@ -1,14 +1,46 @@
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Прижимаем футер к низу */
+main, section {
+    flex: 1 0 auto;
+}
+
+/* Плавное увеличение карточек */
 .card {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
-.nav-tabs .nav-link.active {
-    font-weight: bold;
+/* Красивые ссылки в футере */
+.text-muted-hover:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+#scrollTopBtn.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
