@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог фильмов – Кино-База</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-body-tertiary">
+
+    <!-- 1 ЭКРАН: Поиск и Фильтры -->
+    <section class="container my-5">
+        <div class="p-4 bg-body-secondary border rounded shadow-sm">
+            <h1 class="h3 mb-4">Каталог фильмов</h1>
+            <div class="row align-items-center g-3">
+                <div class="col-12 col-lg-8">
+                    <div class="input-group">
+                        <span class="input-group-text bg-dark border-secondary text-white">Поиск</span>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Введите название фильма...">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <select id="genreFilter" class="form-select">
+                        <option value="all">Все жанры</option>
+                        <option value="Фантастика">Фантастика</option>
+                        <option value="Драма">Драма</option>
+                        <option value="Боевик">Боевик</option>
+                        <option value="Триллер">Триллер</option>
+                        <option value="Комедия">Комедия</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 ЭКРАН: Популярные фильмы (Карточки) -->
+    <section class="container mb-5">
+        <h2 class="h4 mb-4 fw-bold border-bottom pb-2">Все фильмы</h2>
+        <div class="row g-4" id="popularMoviesContainer">
+            <!-- Сюда JS вставит карточки -->
+        </div>
+    </section>
+
+    <!-- 3 ЭКРАН: Топ-5 по версии критиков (Таблица) -->
+    <section class="container mb-5 py-4 bg-body-secondary rounded shadow-sm">
+        <h2 class="h4 mb-4 text-center">Топ-5 по версии критиков</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Место</th>
+                        <th>Название</th>
+                        <th>Год</th>
+                        <th>Жанр</th>
+                        <th>Рейтинг</th>
+                    </tr>
+                </thead>
+                <tbody id="topMoviesTable">
+                    <!-- Сюда JS вставит строки -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollTopBtn" class="btn btn-warning rounded-circle shadow" title="Наверх">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+            <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+        </svg>
+    </button>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/catalog.js"></script> <!-- Отдельный скрипт для каталога -->
+    <script src="js/scroll.js"></script> 
+</body>
+</html>
