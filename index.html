@@ -21,12 +21,22 @@
                 </div>
             </div>
 
-            <!-- ЦЕНТР: Пустое место для будущего контента (Hero, баннер, промо) -->
+            <!-- ЦЕНТР: Баннер с текстом сверху и картинкой снизу -->
             <div class="col-12 col-lg-6 order-1 order-lg-2">
-                <div class="h-100 p-5 bg-body-secondary border rounded shadow-sm d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 500px;">
-                    <h1 class="display-4 fw-bold mb-4">Добро пожаловать в Кино-Базу</h1>
-                    <p class="lead text-muted mb-4">Здесь скоро появится главный баннер, подборка недели или анонс премьер.</p>
-                    <a href="catalog.html" class="btn btn-warning btn-lg px-4">Перейти в каталог фильмов</a>
+                <div class="h-100 p-4 p-md-5 bg-body-secondary border rounded shadow-sm d-flex flex-column justify-content-between">
+                    
+                    <!-- ВЕРХНЯЯ ЧАСТЬ: Текст и кнопка -->
+                    <div class="text-center mb-4">
+                        <h1 class="display-5 fw-bold mb-3">Мир кино ждет вас</h1>
+                        <p class="lead text-muted mb-4">Тысячи фильмов, честные рецензии и лучшие новинки проката.</p>
+                        <a href="catalog.html" class="btn btn-warning btn-lg px-4 py-2 fw-bold">Перейти в каталог</a>
+                    </div>
+                    
+                    <!-- НИЖНЯЯ ЧАСТЬ: Картинка -->
+                    <div class="flex-grow-1 position-relative" style="min-height: 250px;">
+                        <img src="images/hero-bg.jpg" class="position-absolute top-0 start-0 w-100 h-100 rounded" style="object-fit: cover;" alt="Кадр из фильма">
+                    </div>
+
                 </div>
             </div>
 
@@ -40,6 +50,159 @@
 
         </div>
     </section>
+
+    <!-- Блок статистики -->
+    <section class="container my-5">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-body-secondary border rounded shadow-sm">
+                    <h3 class="display-5 fw-bold text-warning mb-1">15 000+</h3>
+                    <p class="text-muted mb-0 small">Фильмов в базе</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-body-secondary border rounded shadow-sm">
+                    <h3 class="display-5 fw-bold text-warning mb-1">50 000+</h3>
+                    <p class="text-muted mb-0 small">Рецензий зрителей</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-body-secondary border rounded shadow-sm">
+                    <h3 class="display-5 fw-bold text-warning mb-1">1 200+</h3>
+                    <p class="text-muted mb-0 small">Профессиональных критиков</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 bg-body-secondary border rounded shadow-sm">
+                    <h3 class="display-5 fw-bold text-warning mb-1">24/7</h3>
+                    <p class="text-muted mb-0 small">Доступ к базе</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок Новости -->
+    <section class="container my-5 py-4 border-top border-secondary">
+        <h2 class="mb-4 border-bottom pb-2">Новости мира кино</h2>
+        
+        <div class="row g-4">
+            <!-- Новость 1 -->
+            <div class="col-md-6">
+                <div class="p-4 bg-body-secondary border rounded h-100 shadow-sm">
+                    <p class="text-warning small mb-2 fw-bold">16 ноября 2026</p>
+                    <h5 class="mb-3">Стартовали съемки новой части «Дюны»</h5>
+                    <p class="text-muted mb-0">Создатели обещают, что фильм станет самой масштабной экранизацией за всю историю франшизы. Съемки пройдут в пустынях Иордании и павильонах Будапешта.</p>
+                </div>
+            </div>
+            
+            <!-- Новость 2 -->
+            <div class="col-md-6">
+                <div class="p-4 bg-body-secondary border rounded h-100 shadow-sm">
+                    <p class="text-warning small mb-2 fw-bold">15 ноября 2026</p>
+                    <h5 class="mb-3">Объявлены номинанты на премию «Оскар»</h5>
+                    <p class="text-muted mb-0">В этом году за главную статуэтку будут бороться сразу несколько независимых картин. Список лидеров возглавила драма о жизни музыкантов.</p>
+                </div>
+            </div>
+
+            <!-- НОВАЯ Новость 3 -->
+            <div class="col-md-6">
+                <div class="p-4 bg-body-secondary border rounded h-100 shadow-sm">
+                    <p class="text-warning small mb-2 fw-bold">14 ноября 2026</p>
+                    <h5 class="mb-3">Кристофер Нолан анонсировал новый проект</h5>
+                    <p class="text-muted mb-0">Режиссер раскрыл подробности своего следующего фильма. По слухам, картина будет посвящена истории создания первого телескопа и борьбе науки с религией.</p>
+                </div>
+            </div>
+
+            <!-- НОВАЯ Новость 4 -->
+            <div class="col-md-6">
+                <div class="p-4 bg-body-secondary border rounded h-100 shadow-sm">
+                    <p class="text-warning small mb-2 fw-bold">12 ноября 2026</p>
+                    <h5 class="mb-3">Кассовые сборы «Дэдпула 3» превысили $1 млрд</h5>
+                    <p class="text-muted mb-0">Фильм стал самым кассовым проектом с рейтингом R в истории, обогнав предыдущего рекордсмена. Зрители особенно отметили возвращение Хью Джекмана.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цитата -->
+    <section class="container my-5">
+        <div class="p-5 bg-body-secondary border rounded shadow-sm text-center position-relative overflow-hidden">
+            <div class="position-absolute top-0 start-50 translate-middle-x display-1 text-secondary opacity-25" style="font-size: 8rem; line-height: 1;">&ldquo;</div>
+            <div class="position-relative z-index-1 py-4">
+                <p class="fs-3 fst-italic fw-light mb-4">"Жизнь похожа на коробку шоколадных конфет. Никогда не знаешь, что тебе попадется."</p>
+                <p class="mb-0 text-warning fw-bold">— Форрест Гамп</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок жанров -->
+    <section class="container my-5 py-5 border-secondary">
+    <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="catalog.html" class="text-decoration-none">
+                <div class="p-4 bg-body-secondary border rounded text-center hover-effect h-100">
+                    <div class="fs-1 mb-2">🚀</div>
+                    <h4 class="h6 text-white mb-0">Фантастика</h4>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="catalog.html" class="text-decoration-none">
+                <div class="p-4 bg-body-secondary border rounded text-center hover-effect h-100">
+                    <div class="fs-1 mb-2">🎭</div>
+                    <h4 class="h6 text-white mb-0">Драма</h4>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="catalog.html" class="text-decoration-none">
+                <div class="p-4 bg-body-secondary border rounded text-center hover-effect h-100">
+                    <div class="fs-1 mb-2">💥</div>
+                    <h4 class="h6 text-white mb-0">Боевик</h4>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="catalog.html" class="text-decoration-none">
+                <div class="p-4 bg-body-secondary border rounded text-center hover-effect h-100">
+                    <div class="fs-1 mb-2">😂</div>
+                    <h4 class="h6 text-white mb-0">Комедия</h4>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="catalog.html" class="text-decoration-none">
+                <div class="p-4 bg-body-secondary border rounded text-center hover-effect h-100">
+                    <div class="fs-1 mb-2">🔪</div>
+                    <h4 class="h6 text-white mb-0">Триллер</h4>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="catalog.html" class="text-decoration-none">
+                <div class="p-4 bg-body-secondary border rounded text-center hover-effect h-100">
+                    <div class="fs-1 mb-2">👻</div>
+                    <h4 class="h6 text-white mb-0">Ужасы</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- Подписка -->
+    <section class="container my-5 py-5 border-top border-secondary">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="mb-3">Не пропускайте премьеры</h2>
+                <p class="text-muted mb-4">Подпишитесь на нашу еженедельную рассылку и получайте подборки лучших фильмов.</p>
+                <form class="input-group input-group-lg w-75 mx-auto">
+                    <input type="email" class="form-control" placeholder="Ваш Email" required>
+                    <button class="btn btn-warning" type="submit">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Кнопка "Наверх" -->
     <button id="scrollTopBtn" class="btn btn-warning rounded-circle shadow" title="Наверх">

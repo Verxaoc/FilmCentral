@@ -6,6 +6,7 @@ const movies = [
         rating: 8.6,
         genre: "Фантастика",
         isNew: false,
+        status: "released",
         poster: "images/interstellar.jpg",
         description: "Когда засуха, пыльные бури и вымирание растений приводят человечество к продовольственному кризису, коллектив исследователей и учёных отправляется сквозь червоточину...",
         director: "Кристофер Нолан",
@@ -28,6 +29,7 @@ const movies = [
         rating: 8.5,
         genre: "Фантастика",
         isNew: true,
+        status: "released",
         poster: "images/dune2.jpg",
         description: "Пол Атрейдес объединяется с Чани и фременами, чтобы отомстить заговорщикам, уничтожившим его семью.",
         director: "Дени Вильнёв",
@@ -44,6 +46,7 @@ const movies = [
         rating: 8.3,
         genre: "Драма",
         isNew: false,
+        status: "released",
         poster: "images/oppenheimer.jpg",
         description: "История жизни американского физика Роберта Оппенгеймера, который стоял во главе первых разработок ядерного оружия.",
         director: "Кристофер Нолан",
@@ -60,6 +63,7 @@ const movies = [
         rating: 8.7,
         genre: "Фантастика",
         isNew: false,
+        status: "released",
         poster: "images/matrix.jpg",
         description: "Жизнь Томаса Андерсона разделена на две части: днём он программист, а ночью — хакер Нео. Однажды он узнаёт, что мир, в котором он живёт, — иллюзия.",
         director: "Лана Вачовски, Лилли Вачовски",
@@ -76,6 +80,7 @@ const movies = [
         rating: 9.8,
         genre: "Драма",
         isNew: false,
+        status: "released",
         poster: "images/TheShawshankRedemption.jpg",
         description: "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме, он не сдаётся и находит друзей.",
         director: "Фрэнк Дарабонт",
@@ -92,6 +97,7 @@ const movies = [
         rating: 8.8,
         genre: "Драма",
         isNew: false,
+        status: "released",
         poster: "images/FightClub.jpg",
         description: "Сотрудник страховой компании страдает хронической бессонницей и ищет выход. Знакомство с торговцем мылом Тайлером Дёрденом меняет его жизнь.",
         director: "Дэвид Финчер",
@@ -110,6 +116,7 @@ const movies = [
         rating: 9.0,
         genre: "Боевик",
         isNew: false,
+        status: "released",
         poster: "images/TheDarkKnight.jpg",
         description: "Бэтмен поднимает ставки в войне с преступностью. Но в Готэме появляется новый преступник — Джокер, который сеет хаос и анархию.",
         director: "Кристофер Нолан",
@@ -126,6 +133,7 @@ const movies = [
         rating: 7.2,
         genre: "Боевик",
         isNew: false,
+        status: "released",
         poster: "images/JohnWick.jpg",
         description: "Джон Уик — бывший наемный убийца, который вынужден вернуться к своему ремеслу после того, как бандиты врываются в его дом.",
         director: "Чад Стахелски",
@@ -142,6 +150,7 @@ const movies = [
         rating: 8.7,
         genre: "Триллер",
         isNew: false,
+        status: "released",
         poster: "images/Inception.jpg",
         description: "Кобб — талантливый вор, лучший из лучших в опасном искусстве извлечения: он крадет ценные секреты из глубин подсознания во время сна.",
         director: "Кристофер Нолан",
@@ -151,8 +160,6 @@ const movies = [
             users: [{ author: "Анна", text: "Мозг взрывается, но это прекрасно.", rating: 10 }]
         }
     },
-
-    // --- КОМЕДИЯ ---
     {
         id: 10,
         title: "Один дома",
@@ -160,6 +167,7 @@ const movies = [
         rating: 7.6,
         genre: "Комедия",
         isNew: false,
+        status: "released",
         poster: "images/HomeAlone.jpg",
         description: "Восьмилетний Кевин остаётся один дома, когда его семья в спешке уезжает в Париж на рождественские каникулы. Ему придётся защитить дом от двух грабителей.",
         director: "Крис Коламбус",
@@ -176,6 +184,7 @@ const movies = [
         rating: 8.5,
         genre: "Комедия",
         isNew: false,
+        status: "released",
         poster: "images/TheGentelmen.jpg",
         description: "Американский эксперт по марихуане Микки Пирсон решает продать свой прибыльный бизнес в Лондоне. Это порождает целую цепь шантажа, интриг и предательств.",
         director: "Гай Ричи",
@@ -192,6 +201,7 @@ const movies = [
         rating: 7.5,
         genre: "Комедия",
         isNew: false,
+        status: "released",
         poster: "images/Barbie.jpg",
         description: "Барби и Кен отправляются в путешествие в реальный мир, где им предстоит столкнуться с настоящими проблемами и осознать свое место в жизни.",
         director: "Грета Гервиг",
@@ -199,6 +209,160 @@ const movies = [
         reviews: {
             critics: [{ author: "Vogue", text: "Яркий, абсурдный и очень умный фильм.", rating: 8 }],
             users: [{ author: "Ольга", text: "Гослинг украл все шоу.", rating: 9 }]
+        }
+    },
+    {
+        id: 13,
+        title: "Дэдпул и Росомаха",
+        year: 2024,
+        rating: 7.8,
+        genre: "Боевик",
+        isNew: true,
+        status: "released",
+        poster: "images/deadpool3.jpg",
+        description: "Уэйд Уилсон объединяется с Росомахой, чтобы спасти свой мир от уничтожения.",
+        director: "Шон Леви",
+        cast: ["Райан Рейнольдс", "Хью Джекман", "Эмма Коррин"],
+        reviews: {
+            critics: [{ author: "Empire", text: "Взрывной коктейль из юмора и экшена.", rating: 8 }],
+            users: [{ author: "Дмитрий", text: "Шутки на каждом шагу, Джекман великолепен!", rating: 9 }]
+        }
+    },
+    {
+        id: 14,
+        title: "Головоломка 2",
+        year: 2024,
+        rating: 8.1,
+        genre: "Комедия",
+        isNew: true,
+        status: "released",
+        poster: "images/insideout2.jpg",
+        description: "Райли исполняется 13 лет, и в штаб-квартиру ее разума приходят новые эмоции, главная из которых — Тревожность.",
+        director: "Келси Манн",
+        cast: ["Эми Полер", "Майя Хоук", "Кенсингтон Толлман"],
+        reviews: {
+            critics: [{ author: "Variety", text: "Мультфильм, который говорит со взрослыми на их языке.", rating: 9 }],
+            users: [{ author: "Елена", text: "Тревожность — лучший персонаж. Очень жизненно.", rating: 9 }]
+        }
+    },
+    {
+        id: 15,
+        title: "Джокер: Безумие на двоих",
+        year: 2024,
+        rating: 6.5,
+        genre: "Триллер",
+        isNew: false,
+        status: "released",
+        poster: "images/joker2.jpg",
+        description: "Артур Флек встречает Харли Квинн в стенах лечебницы Аркхэм.",
+        director: "Тодд Филлипс",
+        cast: ["Хоакин Феникс", "Леди Гага", "Брендан Глисон"],
+        reviews: {
+            critics: [{ author: "IndieWire", text: "Смелый и странный мюзикл.", rating: 6 }],
+            users: [{ author: "Алексей", text: "Ждем не дождемся премьеры!", rating: 10 }]
+        }
+    },
+    {
+        id: 16,
+        title: "Гладиатор 2",
+        year: 2024,
+        rating: 7.0,
+        genre: "Боевик",
+        isNew: false,
+        status: "released",
+        poster: "images/gladiator2.jpg",
+        description: "История Луция, племянника императора Коммода, который вынужден сражаться на арене.",
+        director: "Ридли Скотт",
+        cast: ["Пол Мескал", "Педро Паскаль", "Дензел Вашингтон"],
+        reviews: {
+            critics: [{ author: "IGN", text: "Возвращение в Рим обещает быть эпичным.", rating: 8 }],
+            users: [{ author: "Сергей", text: "Надеюсь, не испортят классику.", rating: 7 }]
+        }
+    },
+    {
+        id: 17,
+        title: "Злая: Сказка о ведьме Запада",
+        year: 2024,
+        rating: 7.2,
+        genre: "Фантастика",
+        isNew: false,
+        status: "released",
+        poster: "images/wicked.jpg",
+        description: "История дружбы и соперничества двух ведьм из страны Оз.",
+        director: "Джон М. Чу",
+        cast: ["Синтия Эриво", "Ариана Гранде", "Джонатан Бэйли"],
+        reviews: {
+            critics: [{ author: "The Guardian", text: "Грандиозная экранизация легендарного мюзикла.", rating: 8 }],
+            users: [{ author: "Мария", text: "Ариана Гранде бесподобна!", rating: 9 }]
+        }
+    },
+    {
+        id: 18,
+        title: "Бегущий по лезвию 2049",
+        year: 2017,
+        rating: 8.0,
+        genre: "Фантастика",
+        isNew: false,
+        poster: "images/blade2049.jpg",
+        description: "Офицер полиции Кей пытается раскрыть тайну, которая может привести к войне между людьми и репликантами.",
+        director: "Дени Вильнёв",
+        cast: ["Райан Гослинг", "Харрисон Форд", "Ана де Армас"],
+        reviews: {
+            critics: [{ author: "Rolling Stone", text: "Визуальный шедевр. Медленное, но глубокое кино.", rating: 9 }],
+            users: [{ author: "Владислав", text: "Очень атмосферно, картинка потрясающая.", rating: 8 }]
+        }
+    },
+    {
+        id: 19,
+        title: "Зеленая миля",
+        year: 1999,
+        rating: 9.1,
+        genre: "Драма",
+        isNew: false,
+        status: "released",
+        poster: "images/greenmile.jpg",
+        description: "В тюрьме для смертников появляется заключенный с необычным даром — он умеет исцелять.",
+        director: "Фрэнк Дарабонт",
+        cast: ["Том Хэнкс", "Майкл Кларк Дункан", "Дэвид Морс"],
+        reviews: {
+            critics: [{ author: "Chicago Sun-Times", text: "Одна из лучших экранизаций Стивена Кинга.", rating: 10 }],
+            users: [{ author: "Анна", text: "Самый грустный фильм, который я видела.", rating: 10 }]
+        }
+    },
+    {
+        id: 20,
+        title: "Аватар 3: Огонь и пепел",
+        year: 2027,
+        releaseDate: "2027-12-17", // <--- Дата выхода
+        rating: 0, // Рейтинга еще нет
+        genre: "Фантастика",
+        isNew: false,
+        status: "upcoming",
+        poster: "images/avatar3.jpg",
+        description: "Джейк Салли и Нейтири сталкиваются с новым племенем На'ви — народом пепла, которое живет у вулканов Пандоры.",
+        director: "Джеймс Кэмерон",
+        cast: ["Сэм Уортингтон", "Зои Салдана", "Сигурни Уивер"],
+        reviews: {
+            critics: [{ author: "Empire", text: "Кэмерон снова обещает революцию в визуальных эффектах.", rating: 0 }],
+            users: [{ author: "Киноман", text: "Ждем с нетерпением! Первые две части были шедеврами.", rating: 10 }]
+        }
+    },
+    {
+        id: 21,
+        title: "Бэтмен: Часть вторая",
+        year: 2027,
+        releaseDate: "2027-10-01", // <--- Дата выхода
+        rating: 0,
+        genre: "Боевик",
+        isNew: false,
+        status: "upcoming",
+        poster: "images/batman2.jpg",
+        description: "Продолжение истории Мстителя в Готэме. Бэтмену предстоит столкнуться с новыми угрозами и раскрыть тайны, скрытые в тени города.",
+        director: "Мэтт Ривз",
+        cast: ["Роберт Паттинсон", "Зои Кравиц", "Пол Дано"],
+        reviews: {
+            critics: [{ author: "IGN", text: "Ривз создал уникальный детективный нуар, ждем продолжения.", rating: 0 }],
+            users: [{ author: "Дарт Вейдер", text: "Надеюсь, вторая часть будет такой же мрачной.", rating: 9 }]
         }
     }
 ];

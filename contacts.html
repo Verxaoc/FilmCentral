@@ -9,14 +9,19 @@
 </head>
 <body class="bg-body-tertiary">
 
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h1 class="display-6 fw-bold mb-4 text-center">Свяжитесь с нами</h1>
-                <div class="card shadow-sm">
+    <main class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Свяжитесь с нами</h1>
+            <p class="lead text-muted">Есть вопросы, предложения или хотите стать автором? Мы всегда на связи.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <!-- ЛЕВАЯ КОЛОНКА: Форма -->
+            <div class="col-12 col-lg-7">
+                <div class="card bg-body-secondary border-0 shadow-sm h-100">
                     <div class="card-body p-4 p-md-5">
-                        <p class="text-muted mb-4">Если у вас есть вопросы, предложения о сотрудничестве или вы нашли ошибку на сайте, заполните форму ниже.</p>
-                        
+                        <h2 class="h4 mb-4">Напишите нам</h2>
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -26,46 +31,100 @@
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">E-mail</label>
                                     <div class="input-group">
-                                        <span class="input-group-text">@</span>
+                                        <span class="input-group-text bg-dark border-secondary text-white">@</span>
                                         <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
+                                    <label for="topic" class="form-label">Тема обращения</label>
+                                    <select class="form-select" id="topic">
+                                        <option selected>Выберите тему...</option>
+                                        <option value="1">Предложение о сотрудничестве</option>
+                                        <option value="2">Вопрос по работе сайта</option>
+                                        <option value="3">Стать автором рецензии</option>
+                                        <option value="4">Другое</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
                                     <label for="message" class="form-label">Сообщение</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Ваше сообщение..." required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="agree" required>
-                                        <label class="form-check-label" for="agree">
+                                        <label class="form-check-label small text-muted" for="agree">
                                             Я согласен на обработку персональных данных
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-primary w-100 py-2">Отправить сообщение</button>
+                                    <button type="submit" class="btn btn-warning w-100 py-2 fw-bold">Отправить сообщение</button>
                                 </div>
                             </div>
                         </form>
-
-                        <hr class="my-4">
-                        
-                        <div class="row text-center mt-4">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <h5 class="h6 text-muted">Электронная почта</h5>
-                                <a href="mailto:info@kinobaza.ru" class="text-decoration-none">info@kinobaza.ru</a>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="h6 text-muted">Телефон</h5>
-                                <a href="tel:+78005553535" class="text-decoration-none">+7 (800) 555-35-35</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- ПРАВАЯ КОЛОНКА: Контакты -->
+            <div class="col-12 col-lg-5">
+                <div class="d-flex flex-column gap-4 h-100">
+                    
+                    <!-- Блок с реквизитами -->
+                    <div class="card bg-body-secondary border-0 shadow-sm p-4">
+                        <h3 class="h5 mb-4">Контактная информация</h3>
+                        
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="fs-4 text-warning me-3">📍</div>
+                            <div>
+                                <h6 class="mb-1">Офис</h6>
+                                <p class="text-muted small mb-0">г. Москва, ул. Кинематографистов, д. 10</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="fs-4 text-warning me-3">✉️</div>
+                            <div>
+                                <h6 class="mb-1">E-mail</h6>
+                                <a href="mailto:info@kinobaza.ru" class="text-decoration-none text-muted small">info@kinobaza.ru</a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start">
+                            <div class="fs-4 text-warning me-3">📞</div>
+                            <div>
+                                <h6 class="mb-1">Телефон</h6>
+                                <a href="tel:+78005553535" class="text-decoration-none text-muted small">+7 (800) 555-35-35</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Блок с графиком работы -->
+                    <div class="card bg-body-secondary border-0 shadow-sm p-4">
+                        <h3 class="h5 mb-3">График работы</h3>
+                        <ul class="list-unstyled mb-0 text-muted small">
+                            <li class="d-flex justify-content-between mb-2 border-bottom border-secondary pb-2">
+                                <span>Понедельник - Пятница</span>
+                                <strong class="text-white">10:00 - 19:00</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2 border-bottom border-secondary pb-2">
+                                <span>Суббота</span>
+                                <strong class="text-white">12:00 - 17:00</strong>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>Воскресенье</span>
+                                <strong class="text-warning">Выходной</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </main>
 
+    <!-- Кнопка "Наверх" -->
     <button id="scrollTopBtn" class="btn btn-warning rounded-circle shadow" title="Наверх">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>

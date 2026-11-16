@@ -35,10 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
         let filtered = movies.filter(movie => {
             const matchesSearch = movie.title.toLowerCase().includes(searchTerm);
             const matchesGenre = genre === 'all' || movie.genre === genre;
-            return matchesSearch && matchesGenre;
+            
+            // Проверяем, что фильм НЕ является "Скоро в кино"
+            const isReleased = movie.status !== "upcoming"; 
+
+            return matchesSearch && matchesGenre && isReleased;
         });
 
+        // Сортируем по рейтингу (от большего к меньшему)
         filtered.sort((a, b) => b.rating - a.rating);
+
+        // ОГРАНИЧЕНИЕ: оставляем только первые 21 карточку
+        filtered = filtered.slice(0, 21);
+
+        // Отрисовываем
         renderMovies(filtered);
     }
 
