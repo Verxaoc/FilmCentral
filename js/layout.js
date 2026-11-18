@@ -23,3 +23,31 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.insertAdjacentHTML('beforeend', data);
         });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    
+    // Проверяем сохраненную тему
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-bs-theme', savedTheme);
+
+    if(themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Включаем плавный переход
+            document.body.classList.add('theme-transition');
+            
+            // Меняем тему
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Убираем класс перехода через 0.5 сек, чтобы не тормозило при скролле
+            setTimeout(() => {
+                document.body.classList.remove('theme-transition');
+            }, 500);
+        });
+    }
+});

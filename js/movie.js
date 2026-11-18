@@ -105,6 +105,51 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="index.html" class="btn btn-outline-secondary">← Назад в каталог</a>
                 </div>
             </div>
+
+            // Блок "Действия с фильмом"
+            <div class="card bg-body-secondary border-0 shadow-sm p-3 mt-4">
+                <h5 class="mb-3">Действия</h5>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-outline-success btn-sm save-btn" data-status="watched">✅ Просмотрено</button>
+                    <button class="btn btn-outline-warning btn-sm save-btn" data-status="planned">⏱ В планах</button>
+                    <button class="btn btn-outline-danger btn-sm save-btn" data-status="favorite">❤️ Любимое</button>
+                </div>
+                <hr>
+                <h6>Мастер оценок</h6>
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#ratingModal">Оценить фильм</button>
+            </div>
+
+            <!-- Модальное окно оценок -->
+            <div class="modal fade" id="ratingModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Оценка: ${movie.title}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="ratingForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Сюжет (1-10): <span id="plotVal">5</span></label>
+                                    <input type="range" class="form-range rating-input" min="1" max="10" value="5" id="plotScore">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Актерская игра (1-10): <span id="actingVal">5</span></label>
+                                    <input type="range" class="form-range rating-input" min="1" max="10" value="5" id="actingScore">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Визуал (1-10): <span id="visualVal">5</span></label>
+                                    <input type="range" class="form-range rating-input" min="1" max="10" value="5" id="visualScore">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="button" class="btn btn-primary" id="saveRatingBtn" data-movie-id="${movie.id}">Сохранить оценку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     `;
 });

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет – Кино-База</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-body-tertiary">
+    <main class="container my-5">
+        <h1 class="display-6 fw-bold mb-4">Личный кабинет</h1>
+        
+        <!-- Вкладки -->
+        <ul class="nav nav-tabs mb-4" id="profileTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="saved-tab" data-bs-toggle="tab" data-bs-target="#saved" type="button" role="tab">Сохраненные фильмы</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="stats-tab" data-bs-toggle="tab" data-bs-target="#stats" type="button" role="tab">Статистика</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="profileTabsContent">
+            <!-- Вкладка 1: Сохраненные фильмы -->
+            <div class="tab-pane fade show active" id="saved" role="tabpanel">
+                <div class="row g-4">
+                    <!-- Категории -->
+                    <div class="col-md-4">
+                        <div class="card bg-body-secondary border-0 shadow-sm p-3 mb-3">
+                            <h5 class="mb-3">Просмотрено</h5>
+                            <ul class="list-group list-group-flush" id="watchedList"></ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-body-secondary border-0 shadow-sm p-3 mb-3">
+                            <h5 class="mb-3">В планах</h5>
+                            <ul class="list-group list-group-flush" id="plannedList"></ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-body-secondary border-0 shadow-sm p-3 mb-3">
+                            <h5 class="mb-3">Любимое</h5>
+                            <ul class="list-group list-group-flush" id="favoriteList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка 2: Статистика -->
+            <div class="tab-pane fade" id="stats" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card bg-body-secondary border-0 shadow-sm p-4 text-center">
+                            <h5 class="text-muted mb-2">Всего просмотрено</h5>
+                            <h2 class="display-4 fw-bold text-warning" id="totalWatched">0</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-body-secondary border-0 shadow-sm p-4">
+                            <h5 class="text-muted mb-3">Любимые жанры</h5>
+                            <div id="genreStats"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/scroll.js"></script> 
+</body>
+</html>
